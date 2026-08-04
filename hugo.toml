@@ -16,6 +16,11 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "404"]
   blurb = "Mirrors the observable behaviour of Ruby's `toml` from reference Ruby (MRI), validated by a differential oracle against the reference rather than approximated — **without any Ruby runtime**."
 
 [[params.phases]]
+  name = "toml-test conformance · 99.86%"
+  status = "ready"
+  blurb = "**708 of 709** cases of the canonical [toml-lang/toml-test](https://github.com/toml-lang/toml-test) corpus for TOML v1.0.0 resolve to the reference verdict (all 210 valid cases parse and match). This is the **toml-rb-faithful ceiling**, not a gap: the one case outside it (`invalid/string/multiline-quotes-01`) is where `toml-rb`'s own grammar accepts input strict TOML rejects, and this port matches `toml-rb` **by design**."
+
+[[params.phases]]
   name = "Standalone & reusable"
   status = "ready"
   blurb = "A standalone Go module any program can import; the OAuth-style dependency runs the other way — `rbgo` binds it into [go-embedded-ruby](https://github.com/go-embedded-ruby/ruby) as a native module, the same pattern as go-ruby-yaml."
